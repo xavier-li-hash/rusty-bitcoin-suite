@@ -1,0 +1,94 @@
+# =======================================
+# Rust / Cargo 默认构建产物
+# =======================================
+/target/
+/Cargo.lock
+
+# 若是 library crate (lib)，可以考虑保留 Cargo.lock
+# 对 binary 项目（可执行程序）建议忽略 Cargo.lock
+# 如果想强制保留，请注释掉上面那行。
+
+# =======================================
+# Rust 代码格式与工具缓存
+# =======================================
+**/*.rs.bk
+/.rustfmt.toml
+/.cargo/
+.cargo-ok
+
+# Rust Clippy / RLS / rust-analyzer 缓存
+/.rustc_info.json
+/.rustup/
+/rls/
+.rust-analyzer/
+target/**/.rustc_info.json
+
+# =======================================
+# IDE / 编辑器配置
+# =======================================
+
+# VSCode
+.vscode/
+.vscode-test/
+
+# JetBrains IDEs (IntelliJ, CLion, RustRover)
+.idea/
+
+# Sublime
+*.sublime-workspace
+*.sublime-project
+
+# =======================================
+# 系统与临时文件
+# =======================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# =======================================
+# Logs / 临时文件
+# =======================================
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.lock
+
+# =======================================
+# 测试 / Benchmark 输出
+# =======================================
+/benches/target/
+/tests/target/
+/examples/target/
+coverage/
+.profraw
+.profdata
+
+# =======================================
+# Cargo 编译缓存
+# =======================================
+/.cargo/
+/registry/
+/index/
+
+# =======================================
+# WASM / FFI / 其他构建产物
+# =======================================
+/pkg/
+/node_modules/
+/dist/
+/wasm-pack.log
+
+# =======================================
+# 如果使用了 docs 构建
+# =======================================
+/book/
+/docs/book/
+/book.toml
+
+# =======================================
+#  workspace，请忽略子 crate 的 target
+# =======================================
+**/target/
